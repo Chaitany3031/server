@@ -9,11 +9,12 @@
         public string Status { get; set; } = string.Empty;
         //Ownership
         public int CreatorId { get; set; }
-        public User Creator { get; set; } = new User();
+        public User? Creator { get; set; } 
         //Project relation
         public int ProjectId { get; set; }
-        public Project Project { get; set; } = new Project();
+        public Project? Project { get; set; } 
         //taskassignment 
-        public ICollection<TaskAssignment> TaskAssignments { get; set; } = new List<TaskAssignment>();
+        public ICollection<TaskAssignment> ? TaskAssignments { get; set; } 
+        public ICollection<Comment>?Comments{ get;set;}
     }
 }

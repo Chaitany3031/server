@@ -3,10 +3,10 @@
     public class ProjectMember
     {
         public int UserId { get; set; }
-        public User User { get; set; } = new User();
+        public User? User  { get; set; } 
         public int ProjectId { get; set; }
-        public Project Project { get; set; } = new Project();
+        public Project ? Project { get; set; } 
         public string Role { get; set; } = string.Empty;
-        public DateTime JoinedOn { get; set; } = new DateTime();
+        public DateTime JoinedOn { get; set; } = DateTime.UtcNow;
     }
 }
